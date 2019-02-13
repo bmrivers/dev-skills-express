@@ -5,6 +5,30 @@ const skills = [
     {skill: 'Node.js', level: 1},
 ];
 
+module.exports = {
+    getAll, 
+    getOne,
+    create,
+    deleteOne,
+    update
+}
+
+function update(id, skill) {
+    console.log(id);
+    console.log('*****');
+    console.log(skill);
+  
+    skills[id] = skill;
+}
+
+function create(skill) {
+    skills.push(skill);
+}
+
+function deleteOne(id) {
+    skills.splice(id, 1);
+}
+
 function getAll() {
     return skills;
 }
@@ -13,7 +37,3 @@ function getOne(id) {
     return skills[id];
 }
 
-module.exports = {
-    getAll, 
-    getOne,
-}
