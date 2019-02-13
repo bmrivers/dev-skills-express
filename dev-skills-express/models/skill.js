@@ -14,10 +14,6 @@ module.exports = {
 }
 
 function update(id, skill) {
-    console.log(id);
-    console.log('*****');
-    console.log(skill);
-  
     skills[id] = skill;
 }
 
